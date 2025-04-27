@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/users">List Users</a>
+        <a href="/users/register">Create Users</a>
+        <a href="/products">Products</a>
+        <a href="/products/shirt">Shirt</a>
+    </div>
+
+    <h1>Danh sách người dùng</h1>
+    <ul>
+        <% if (users.length === 0) { %>
+            <li>Không có người dùng nào.</li>
+        <% } else { %>
+            <% users.forEach(user => { %>
+                <li><%= user.name %> - <%= user.email %> - <%= user.city%></li>
+            <% }) %>
+        <% } %>
+    </ul>
+</body>
+</html>

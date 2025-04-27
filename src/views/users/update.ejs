@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/users/update.css">
+    <title>Update User</title>
+</head>
+
+<body>
+    <h1>Update User</h1>
+    <div class="form">
+        <form action="/users/update/<%= user.id %>" method="post">
+            <fieldset>
+                <legend>Form Add New Users</legend>
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" value="<%= user.name %>">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" value="<%= user.email %>">
+                </div>
+                <div class="input-group">
+                    <label for="city">City</label>
+                    <input type="text" name="city" value="<%= user.city %>">
+                </div>
+                <div>
+                    <button>
+                        Update User
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
